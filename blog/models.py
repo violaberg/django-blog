@@ -21,7 +21,7 @@ class Post(models.Model):
         ordering = ["-created_on"]
 
     def __str__(self):
-        return f"The title of this post is '{self.title}' | written by {self.author}"
+        return f"The title of this post is {self.title} | written by {self.author}"
 
 
 # Comment model
@@ -36,4 +36,4 @@ class Comment(models.Model):
         ordering = ["created_on"]
 
     def __str__(self):
-        return f"Comment '{self.body}' by {self.author}"
+        return f"Comment {self.body} by {self.author}"
